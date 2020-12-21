@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$pagination-item-margin: 1rem;
+$navbar-background-color: transparent;
+
+@import "bulma";
+@import "functions";
+
+
+/* Buttons */
+
+
+.button.is-small.is-black { font-weight: 600; }
+.button.is-light   { background-color: #f1f1f1; }
+.button.is-warning { background-color: #8b0000;
+                     color: #fff;
+                     font-weight: 500;
+            &:hover {
+                      background-color: #8b0000;
+                      color: #fff;
+                    }
+                   }
+
+
+/* Notifications */
+
+
+.notification { border-radius: 0; }
+.notification:not(:last-child) { margin-bottom: 0; }
+
+
+
+/* projects */
+
+
+.project-index-grid .project-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.pa3 {
+    padding: var(--spacing-medium);
+    background: #2222;
+    border-radius: 0.5rem;
+}
+
+.project-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+
+  .project {
+    border-left: 0;
+    border-top: 0;
+    position: relative;
+    min-height: 50px;
+    border-color: transparent;
+    margin: 0.3rem;
+
+    .column.has-text-centered { padding: 0.9rem 0 0 0; }
+
+    .title {
+      line-height: 1.3rem;
+      font-size: 0.8rem;
+      min-height: 2rem;
+      background: #eee;
+      text-align: center;
+      padding: 5px 0;
+      margin-bottom: 0;
+      position: relative;
+      border-radius: 0.3rem;
+      font-weight: 500;
+      
+      a { color: #222; }
+    }
+    .price {
+      position: absolute;
+    }
+  }
+
+  .project-thumb {
+    position: relative;
+    max-height: 175px;
+    overflow: hidden;
+  }
+}
+
+.will_paginate {
+  text-align: center;
+  cursor: default;
+  a, span {
+    color: #111;
+    padding: 0 0.4em; }
+  .disabled {
+    color: #eaeaea; }
+  .current {
+    color: #fff;
+    font-style: normal;
+    font-weight: bold;
+    background-color: darken(#8b0000, 20);
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 0.2em; }
+  a {
+    text-decoration: none;
+    color: #222;
+    &:hover, &:focus {
+      text-decoration: underline; } } }
+
+.column.pagination        { padding: 2rem 0 }
+
+.footer { background-color: #111; }
